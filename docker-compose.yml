@@ -25,24 +25,11 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./baseDatos/init.sql:/docker-entrypoint-initdb.d/init.sql
-    command: --init-file /docker-entrypoint-initdb.d/init.sql
+      - ./baseDatos/inicio.sql:/docker-entrypoint-initdb.d/inicio.sql
+    command: --init-file /docker-entrypoint-initdb.d/inicio.sql
     networks:
       mynetwork:
         ipv4_address: 192.168.10.3
-
-  container3:
-    image: ubuntu
-    container_name: container3
-    volumes:
-      - ./api/:/app
-    command: bash -c "apt update && apt install -y python3 python3-pip libmysqlclient-dev && pip install -r /app/requirements.txt && python3 /app/dashboard.py"
-    ports:
-      - 5600:5600
-    networks:
-      mynetwork:
-        ipv4_address: 192.168.10.4
-
 networks:
   mynetwork:
     ipam:
