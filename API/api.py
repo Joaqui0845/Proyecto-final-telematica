@@ -22,7 +22,7 @@ fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 
 server = Flask(__name__)
 
-VALID_PASSWORD = "123456"
+VALID_PASSWORD = "Joaqui2023"
 
 @server.route('/')
 def index():
