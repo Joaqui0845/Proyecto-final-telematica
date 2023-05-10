@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro De Usuarios</title>
+</head>
+<body>
+    <h1>Registro</h1>
+	{% if error %}
+		<p style="color: blue">{{ error }}</p>
+	{% endif %}
+	<form method="POST" action="{{ url_for('register') }}">
+		<label>Nombre de usuario:</label>
+		<input type="text" name="username"><br><br>
+		<label>Contraseña:</label>
+		<input type="password" name="password"><br><br>
+		<label>Confirmar contraseña:</label>
+		<input type="password" name="confirm_password"><br><br>
+		<input type="submit" value="Registrarse">
+	</form>
+</body>
+</html>
