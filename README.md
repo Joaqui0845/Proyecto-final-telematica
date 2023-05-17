@@ -1,7 +1,7 @@
 # Proyecto-final-telematica
 Diseño de un servicio telemático a nivel de producción que resuelva la visualización de los sensores de nivel de agua de la plataforma SIATA 
 
-<<<<<<< HEAD
+
 =======
 # Pasos para realizar la instalacion de la aplicacion
 El primer paso a realizar es la clonacion del repositorio
@@ -37,4 +37,4 @@ debemos esperar un poco, hasta que los tres contenedores este corriendo de forma
 > ingrese su host local o IP pública a través del puerto 80
 
 > SI es primera vez que se ingresa tienes que realizar el registro
->>>>>>> f06c572c9b6f3d9668f5f1ce6145733dbadc0795
+
