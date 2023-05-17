@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro De Usuarios</title>
+    <title>Registro de Usuarios SIATA</title>
 </head>
-<body>
-    <h1>Registro</h1>
-	{% if error %}
-		<p style="color: blue">{{ error }}</p>
-	{% endif %}
-	<form method="POST" action="{{ url_for('register') }}">
-		<label>Nombre de usuario:</label>
-		<input type="text" name="username"><br><br>
-		<label>Contraseña:</label>
-		<input type="password" name="password"><br><br>
-		<label>Confirmar contraseña:</label>
-		<input type="password" name="confirm_password"><br><br>
-		<input type="submit" value="Registrarse">
-	</form>
+<body style="background-color: #f2f2f2; text-align: center; padding-top: 50px;">
+    <h1 style="color: #333; font-family: Arial, sans-serif;">Registro</h1>
+    {% if error %}
+        <p style="color: blue; font-family: Arial, sans-serif;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="{{ url_for('register') }}" style="display: inline-block; text-align: left;">
+        <label style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">Nombre de usuario:</label><br>
+        <input type="text" name="username" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc; width: 200px; margin-bottom: 10px;"><br><br>
+        <label style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">Contraseña:</label><br>
+        <input type="password" name="password" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc; width: 200px; margin-bottom: 10px;"><br><br>
+        <label style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">Confirmar contraseña:</label><br>
+        <input type="password" name="confirm_password" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc; width: 200px; margin-bottom: 10px;"><br><br>
+        <input type="submit" value="Registrarse" style="background-color: #4CAF50; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 4px; cursor: pointer;">
+    </form>
 </body>
 </html>
